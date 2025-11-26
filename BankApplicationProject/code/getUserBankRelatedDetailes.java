@@ -50,13 +50,13 @@ public class getUserBankRelatedDetailes
 			System.out.println("Enter your PhoneNumber");
 			phoneNum = scan.nextLine();
 			if (phoneNum.length()==10)
-			{
-				System.out.println("");
+			{				
 				WriteUserDetailsToDatabase.writeUserPhoneNumber();
 				break;
 			}
 			else
 			{
+				System.out.println("");
 				System.out.println("Enter valid PhoneNumber");
 			}
 		}
@@ -71,13 +71,13 @@ public class getUserBankRelatedDetailes
 			usrAge = scan.nextLine();
 			int TypeCastusrAge = Integer.parseInt(usrAge);
 			if (TypeCastusrAge>=0)
-			{
-				System.out.println("");
+			{				
 				WriteUserDetailsToDatabase.writeUserAge();
 				break;
 			}
 			else
 			{
+				System.out.println("");
 				System.out.println("Age greater than Zero");
 			}
 		}
@@ -94,12 +94,12 @@ public class getUserBankRelatedDetailes
 			usrGender = scan.nextLine();
 			if (usrGender.equalsIgnoreCase("Male") || usrGender.equalsIgnoreCase("FeMale"))
 			{
-				System.out.println("");
 				WriteUserDetailsToDatabase.writeUserGender();
 				break;
 			}
 			else
 			{
+				System.out.println("");
 				System.out.println("Enter valid Gender");
 			}
 		}
