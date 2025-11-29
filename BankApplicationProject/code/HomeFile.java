@@ -43,8 +43,8 @@ public class HomeFile
 								case 6:System.out.println("you are going back.....");
 												System.out.println("");
 											 	break running;
-								case 7:Settings.LogOutmethod();
-												break;
+								//case 7:Settings.LogOutmethod();
+												//break;
 								case 8:System.out.println("Exiting the Application...");
 												System.exit(0);
 								default:System.out.println("Invalid choice. Please try again.");

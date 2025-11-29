@@ -1,6 +1,6 @@
 package database.code;
 
-public class DeleteUserDetailsFromDtabase
+public class DeleteUserDetailsFromDatabase
 {
-  
+  //public stat
 }

@@ -117,7 +117,7 @@ public class LogInFile
 	public static void CheckProvideBankAccountOrNot() throws IOException
 	{
 		ReadUserDetailsFromDatabase.readUserAddress();
-		if(ReadUserDetailsFromDatabase.userAddress == null || ReadUserDetailsFromDatabase.userAddress.isEmpty())
+		if(ReadUserDetailsFromDatabase.UserAddress == null || ReadUserDetailsFromDatabase.UserAddress.isEmpty())
 		{
 			System.out.println("");
 			System.out.println("You Must Create An Bank Account");
@@ -132,8 +132,8 @@ public class LogInFile
 
 	public static void LogInFunction() throws IOException
 	{
-			ReadUserDetailsFromDatabase.readLoginUserName();
-			ReadUserDetailsFromDatabase.readUserId();
+	  ReadUserDetailsFromDatabase.readLoginUserName();
+	  ReadUserDetailsFromDatabase.readUserId();
       ReadUserDetailsFromDatabase.readUserSecurityPIN();
       System.out.println("Note: If in Case Forget Your UserId and SecurityPIN You can Retrive it.....");
       System.out.println("");
