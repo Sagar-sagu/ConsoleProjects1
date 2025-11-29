@@ -7,6 +7,14 @@ public class viewUsrBankReletedDetailes
 {
 	public static void viewPassBookInterFace() throws IOException
 	{
+		ReadUserDetailsFromDatabase.readUserName();
+		ReadUserDetailsFromDatabase.readUserFatherName();
+		ReadUserDetailsFromDatabase.readUserAccountNumber();
+		ReadUserDetailsFromDatabase.readUserIFSCcode();
+		ReadUserDetailsFromDatabase.readUserCustomerID();
+		ReadUserDetailsFromDatabase.readUserDateOfBirth();
+		ReadUserDetailsFromDatabase.readUserAge();
+		ReadUserDetailsFromDatabase.readUserAddress();
 		System.out.println("");
 		System.out.println("Name :- " + ReadUserDetailsFromDatabase.UserName);
 		System.out.println("Father Name :- " + ReadUserDetailsFromDatabase.UserFatherName);
@@ -20,10 +28,16 @@ public class viewUsrBankReletedDetailes
 
 	public static void viewLastTransactionInPassbook() throws IOException
 	{
+		ReadUserDetailsFromDatabase.readUserName();
+		ReadUserDetailsFromDatabase.readUserPhoneNumber();
+		ReadUserDetailsFromDatabase.readUserSendMoney();
+		ReadUserDetailsFromDatabase.readUserTransactionDate();
+		ReadUserDetailsFromDatabase.readUserTransactionTime();
+		ReadUserDetailsFromDatabase.readUserSendPhoneNumber();
 		  System.out.println("");
 		//	System.out.println("Here you can See Last Transaction only");
 			System.out.println("Debited From ");
-			System.out.println("Account Name :- " + ReadUserDetailsFromDatabase.UserName);
+			System.out.println(" Name :- " + ReadUserDetailsFromDatabase.UserName);
 			System.out.println("PhoneNumber :- " + ReadUserDetailsFromDatabase.UserPhoneNumber);
 			System.out.println("Amount :- " + ReadUserDetailsFromDatabase.UserSendMoney);
 			System.out.println("TransactionTime :- " + ReadUserDetailsFromDatabase.UserTransactionTime );

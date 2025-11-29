@@ -20,7 +20,8 @@ public class HomeFile
 						System.out.println("4.TranscationHistory");
 						System.out.println("5.ViewPassBook");
 						System.out.println("6.Settings");
-						System.out.println("7.Exit");
+						System.out.println("7.LogOut(means Delete Entire BankAccount Detailes)");
+						System.out.println("8.Exit");
 
 						System.out.println("Enter your choice(1,2,3,4,5,6,7) : ");
 						int choice = input.nextInt();
@@ -42,12 +43,14 @@ public class HomeFile
 								case 6:System.out.println("you are going back.....");
 												System.out.println("");
 											 	break running;
-								case 7:System.out.println("Exiting the Application...");
+								case 7:Settings.LogOutmethod();
+												break;
+								case 8:System.out.println("Exiting the Application...");
 												System.exit(0);
 								default:System.out.println("Invalid choice. Please try again.");
 												break;
 					}
 			}
-			input.close();
+			//input.close();
 	}
 }

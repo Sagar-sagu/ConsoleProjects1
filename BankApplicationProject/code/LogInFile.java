@@ -114,6 +114,22 @@ public class LogInFile
             }
     }
 
+	public static void CheckProvideBankAccountOrNot() throws IOException
+	{
+		ReadUserDetailsFromDatabase.readUserAddress();
+		if(ReadUserDetailsFromDatabase.userAddress == null || ReadUserDetailsFromDatabase.userAddress.isEmpty())
+		{
+			System.out.println("");
+			System.out.println("You Must Create An Bank Account");
+			System.out.println("So, You are give your Bank Related Detailes");
+			getUserBankRelatedDetailes.openBankAccount();
+		}
+		else
+		{
+			HomeFile.HomeFunction();
+		}
+	}
+
 	public static void LogInFunction() throws IOException
 	{
 			ReadUserDetailsFromDatabase.readLoginUserName();
@@ -136,9 +152,7 @@ public class LogInFile
               checkUserID();
               checkSecurityPIN();
 							System.out.println("Login Succesfully");
-							System.out.println("You Must Create An Bank Account");
-							System.out.println("So, You are give your Bank Related Detailes");
-							getUserBankRelatedDetailes.openBankAccount();
+							CheckProvideBankAccountOrNot();
               break;
           }
           else

@@ -50,7 +50,7 @@ public class getUserBankRelatedDetailes
 			System.out.println("Enter your PhoneNumber");
 			phoneNum = scan.nextLine();
 			if (phoneNum.length()==10)
-			{				
+			{
 				WriteUserDetailsToDatabase.writeUserPhoneNumber();
 				break;
 			}
@@ -71,7 +71,7 @@ public class getUserBankRelatedDetailes
 			usrAge = scan.nextLine();
 			int TypeCastusrAge = Integer.parseInt(usrAge);
 			if (TypeCastusrAge>=0)
-			{				
+			{
 				WriteUserDetailsToDatabase.writeUserAge();
 				break;
 			}
@@ -135,7 +135,10 @@ public class getUserBankRelatedDetailes
 			 System.out.println("Your are Succesfully Create An Account");
 			 System.out.println("So, You can Select Option ViewPassBook for ");
 			 System.out.println("See Account Related Details");
+			 System.out.println("");
+			 System.out.println("If You Send Money OR View Balance");
+			 System.out.println("First You Set MPIN Pin");
+			 System.out.println("So, Select Settings Option");
 			 HomeFile.HomeFunction();
-
 	}
 }
