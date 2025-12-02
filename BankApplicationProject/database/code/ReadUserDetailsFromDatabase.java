@@ -16,7 +16,7 @@ public class ReadUserDetailsFromDatabase
 	public static String UserFatherName;
 	public static String UserAge;
 	public static String UserDateOfBirth;
-  public static String UserGender;
+	public static String UserGender;
 	public static String UserAddress;
 	public static String UserPhoneNumber;
 	//ProvideBankAccount Variables
@@ -35,10 +35,10 @@ public class ReadUserDetailsFromDatabase
 	public static String UserTransactionDate;
 	public static String UserTransactionTime;
 
-	//Login Methodes
+	//Login Methods
 	public static void readLoginUserName() throws IOException
     {
-        FileReader reader = new FileReader("database/DatabaseFolders/LoginFiles/UserName.txt");
+        FileReader reader = new FileReader("database/databaseFolders/LoginFiles/UserName.txt");
         BufferedReader bufferedReader = new BufferedReader(reader);
         LoginUserName = bufferedReader.readLine();
         bufferedReader.close();
@@ -46,7 +46,7 @@ public class ReadUserDetailsFromDatabase
 
      public static void readUserId() throws IOException
     {
-			FileReader reader = new FileReader("database/DatabaseFolders/LoginFiles/UserID.txt");
+			FileReader reader = new FileReader("database/databaseFolders/LoginFiles/UserID.txt");
 			BufferedReader bufferedReader = new BufferedReader(reader);
 			UserID = bufferedReader.readLine();
 			bufferedReader.close();
@@ -54,13 +54,13 @@ public class ReadUserDetailsFromDatabase
 
      public static void readUserSecurityPIN() throws IOException
     {
-			FileReader reader = new FileReader("database/DatabaseFolders/LoginFiles/SecurityPIN.txt");
+			FileReader reader = new FileReader("database/databaseFolders/LoginFiles/SecurityPIN.txt");
 			BufferedReader bufferedReader = new BufferedReader(reader);
 			securityPIN = bufferedReader.readLine();
 			bufferedReader.close();
      }
 
-		 //UserBankRelated Methodes
+		 //UserBankRelated Methods
      public static void readUserName() throws IOException
     {
         FileReader reader = new FileReader("database/databaseFolders/UserBankRelatedDetailesFiles/usrName.txt");
@@ -117,7 +117,7 @@ public class ReadUserDetailsFromDatabase
 			bufferedReader.close();
      }
 
-		 //ProvideBankAccount Methodes
+		 //ProvideBankAccount Methods
 		 public static void readUserAccountNumber() throws IOException
 		{
 		 FileReader reader = new FileReader("database/databaseFolders/ProvideBankAccountDetailes/UserAccountNumber.txt");
@@ -158,7 +158,7 @@ public class ReadUserDetailsFromDatabase
 				bufferedReader.close();
 		 }
 
-		 //BankFeatures Methodes
+		 //BankFeatures Methods
 		 public static void readUserSetMPINpin() throws IOException
 		{
 			FileReader reader = new FileReader("database/databaseFolders/BankFeaturesDetailes/UserSetMPINpin.txt");

@@ -36,7 +36,7 @@ public class features
 				if (userMpinPin.equals(ReadUserDetailsFromDatabase.UserSetMPINpin))
 				{
 					System.out.println("");
-					System.out.println("Balance :- " + ProvideBankAccount.UserBalance);
+					System.out.println("Balance :- " + ProvideBankAccount.userBalance);
 					break;
 				}
 				else
@@ -65,10 +65,10 @@ public class features
             switch (scanChoice)
             {
                 case "1":SendMoneyTruoghPhoneNumber();
-													ProvideBankAccount.UserBalance = CheckingDetails.CheckSendMoney();
+													ProvideBankAccount.userBalance = CheckingDetails.CheckSendMoney();
                         	break;
                 case "2":SendMoneyTruoghAccountNumber();
-													ProvideBankAccount.UserBalance = CheckingDetails.CheckSendMoney();
+													ProvideBankAccount.userBalance = CheckingDetails.CheckSendMoney();
                         	break;
                 case "3":System.out.println("you are going back.......");
 	                        System.out.println("");
