@@ -17,7 +17,7 @@ public class getUserBankRelatedDetailes
 	public static String usrGender;
 	public static String usrAddress;
 
-	public static void getUserName() throws IOException
+	static void getUserName() throws IOException
 	{
 		System.out.println("");
 		System.out.println("Enter your Full Name");
@@ -25,15 +25,15 @@ public class getUserBankRelatedDetailes
 		WriteUserDetailsToDatabase.writeUserName();
 	}
 
-	public static void getUserFatherName() throws IOException
+	static void getUserFatherName() throws IOException
 	{
 		System.out.println("");
 		System.out.println("Enter your Father Name");
-		usrName = scan.nextLine();
-		WriteUserDetailsToDatabase.writeUserId();
+		usrFatherName = scan.nextLine();
+		WriteUserDetailsToDatabase.writeUserFatherName();
 	}
 
-	public static void getUserDateOfBirth() throws IOException
+	static void getUserDateOfBirth() throws IOException
 	{
 		System.out.println("");
 		System.out.println("Enter your Date Of Birth");
@@ -41,7 +41,7 @@ public class getUserBankRelatedDetailes
 		WriteUserDetailsToDatabase.writeUserDateOfBirth();
 	}
 
-	public static void getPhoneNumber() throws IOException
+	static void getPhoneNumber() throws IOException
 	{
 		System.out.println("");
 		while (true)
@@ -62,7 +62,7 @@ public class getUserBankRelatedDetailes
 		}
 	}
 
-	public static void getUserAge() throws IOException
+	static void getUserAge() throws IOException
 	{
 		System.out.println("");
 		while (true)
@@ -83,7 +83,7 @@ public class getUserBankRelatedDetailes
 		}
 	}
 
-	public static void getGender() throws IOException
+	static void getGender() throws IOException
 	{
 		System.out.println("");
 		while (true)
@@ -105,7 +105,7 @@ public class getUserBankRelatedDetailes
 		}
 	}
 
-	public static void getAddress() throws IOException
+	static void getAddress() throws IOException
 	{
 		System.out.println("");
 		System.out.println("Enter your Address");

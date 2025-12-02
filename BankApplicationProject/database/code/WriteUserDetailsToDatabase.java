@@ -65,7 +65,7 @@ public class WriteUserDetailsToDatabase
 	public static void writeUserGender() throws IOException
     {
         FileWriter WriteDetailes = new FileWriter("database/databaseFolders/UserBankRelatedDetailesFiles/usrGender.txt");
-        WriteDetailes.write(getUserBankRelatedDetailes.usrName);
+        WriteDetailes.write(getUserBankRelatedDetailes.usrGender);
         WriteDetailes.close();
     }
 

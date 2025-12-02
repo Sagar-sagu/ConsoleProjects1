@@ -2,6 +2,7 @@ package code;
 
 import java.io.IOException;
 import java.util.Scanner;
+import database.code.DeleteUserDetailsFromDatabase;
 
 public class HomeFile
 {
@@ -20,10 +21,13 @@ public class HomeFile
 						System.out.println("4.TranscationHistory");
 						System.out.println("5.ViewPassBook");
 						System.out.println("6.Settings");
-						System.out.println("7.LogOut(means Delete Entire BankAccount Detailes)");
+						System.out.println("7.ClearData(means Delete Entire All Detailes)");
 						System.out.println("8.Exit");
+						System.out.println("9.Back");
 
-						System.out.println("Enter your choice(1,2,3,4,5,6,7) : ");
+
+
+						System.out.println("Enter your choice(1,2,3,4,5,6,7,8,9) : ");
 						int choice = input.nextInt();
 
 						switch (choice)
@@ -40,13 +44,16 @@ public class HomeFile
 								case 5:viewUsrBankReletedDetailes.viewPassBookInterFace();
 											  viewUsrBankReletedDetailes.viewLastTransactionInPassbook();
 												break;
-								case 6:System.out.println("you are going back.....");
-												System.out.println("");
-											 	break running;
-								//case 7:Settings.LogOutmethod();
-												//break;
+								case 6: SettingsFile.settings();
+												break;
+								case 7:DeleteUserDetailsFromDatabase.ClearUserDetails();
+                        System.out.println("Delete all Details Successfully...");
+												System.exit(0);
 								case 8:System.out.println("Exiting the Application...");
 												System.exit(0);
+								case 9:System.out.println("you are going back.....");
+												System.out.println("");
+											 	break running;
 								default:System.out.println("Invalid choice. Please try again.");
 												break;
 					}
