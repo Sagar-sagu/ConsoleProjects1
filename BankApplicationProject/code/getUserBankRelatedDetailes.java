@@ -127,6 +127,7 @@ public class getUserBankRelatedDetailes
 					 ProvideBankAccount.ProvideIFSCcode();
 					 ProvideBankAccount.ProvideCustomerID();
 					 ProvideBankAccount.ProvideUPIid();
+					 ProvideBankAccount.ProvideSavingAccount();
 			 } catch (Exception e) {
 					 System.out.println("");
 			 }

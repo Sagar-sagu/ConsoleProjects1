@@ -87,7 +87,7 @@ public class ReadUserDetailsFromDatabase
 
      public static void readUserAge() throws IOException
     {
-			FileReader reader = new FileReader("database/databaseFolders/UserBankRelatedDetailesFiles/usrage.txt");
+			FileReader reader = new FileReader("database/databaseFolders/UserBankRelatedDetailesFiles/usrAge.txt");
 			BufferedReader bufferedReader = new BufferedReader(reader);
 			UserAge = bufferedReader.readLine();
 			bufferedReader.close();
@@ -167,12 +167,13 @@ public class ReadUserDetailsFromDatabase
  		 bufferedReader.close();
 		 }
 
-		 public static void readUserTransactionHistory() throws IOException
+		 public static String readUserTransactionHistory() throws IOException
 		{
-			FileReader reader = new FileReader("database/databaseFolders/BankFeaturesDetailes/UserTransactionHistory.txt");
- 		 BufferedReader bufferedReader = new BufferedReader(reader);
- 		 UserTransactionHistory = bufferedReader.readLine();
- 		 bufferedReader.close();
+		   FileReader reader = new FileReader("database/databaseFolders/BankFeaturesDetailes/UserTransactionHistory.txt");
+	 		 BufferedReader bufferedReader = new BufferedReader(reader);
+	 		 UserTransactionHistory = bufferedReader.readLine();
+	 		 bufferedReader.close();
+			 return UserTransactionHistory;
 		 }
 
 		 public static void readUserSendPhoneNumber() throws IOException

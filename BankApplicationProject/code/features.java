@@ -28,9 +28,14 @@ public class features
 
 	public static void CheckBalance() throws IOException
 	{
-		System.out.println("");
 		ReadUserDetailsFromDatabase.readUserSetMPINpin();
+		ReadUserDetailsFromDatabase.readUserBalance();
 		if(ReadUserDetailsFromDatabase.UserSetMPINpin == null || ReadUserDetailsFromDatabase.UserSetMPINpin.isEmpty())
+		{
+		 System.out.println("");
+ 		 System.out.println("Set MPIN Pin in Setting Through Select Option");
+		}
+		else
 		{
 			while (true)
 			{
@@ -39,7 +44,7 @@ public class features
 					if (userMpinPin.equals(ReadUserDetailsFromDatabase.UserSetMPINpin))
 					{
 						System.out.println("");
-						System.out.println("Balance :- " + ProvideBankAccount.userBalance);
+						System.out.println("Balance :- " + ReadUserDetailsFromDatabase.UserBalance);
 						break;
 					}
 					else
@@ -47,12 +52,7 @@ public class features
 						System.out.println("Invalid MPIN PIN");
 					}
 			 }
-	 }
-	 else
-	 {
-		 System.out.println("");
-		 System.out.println("Set MPIN Pin in Setting Through Select Option");
-	 }
+	  }
 	}
 
 	public static void WaysToSendMoney() throws IOException
