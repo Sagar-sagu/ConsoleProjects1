@@ -28,22 +28,31 @@ public class features
 
 	public static void CheckBalance() throws IOException
 	{
-		System.out.println("");
-		while (true)
+		ReadUserDetailsFromDatabase.readUserSetMPINpin();
+		ReadUserDetailsFromDatabase.readUserBalance();
+		if(ReadUserDetailsFromDatabase.UserSetMPINpin == null || ReadUserDetailsFromDatabase.UserSetMPINpin.isEmpty())
 		{
-				System.out.println("Enter your MPIN pin ");
-				String userMpinPin = scan.nextLine();
-				if (userMpinPin.equals(ReadUserDetailsFromDatabase.UserSetMPINpin))
-				{
-					System.out.println("");
-					System.out.println("Balance :- " + ProvideBankAccount.userBalance);
-					break;
-				}
-				else
-				{
-					System.out.println("Invalid MPIN PIN");
-				}
+		 System.out.println("");
+ 		 System.out.println("Set MPIN Pin in Setting Through Select Option");
 		}
+		else
+		{
+			while (true)
+			{
+					System.out.println("Enter your MPIN pin ");
+					String userMpinPin = scan.nextLine();
+					if (userMpinPin.equals(ReadUserDetailsFromDatabase.UserSetMPINpin))
+					{
+						System.out.println("");
+						System.out.println("Balance :- " + ReadUserDetailsFromDatabase.UserBalance);
+						break;
+					}
+					else
+					{
+						System.out.println("Invalid MPIN PIN");
+					}
+			 }
+	  }
 	}
 
 	public static void WaysToSendMoney() throws IOException

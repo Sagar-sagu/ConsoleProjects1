@@ -21,9 +21,9 @@ public class SignInFile
 
 	public static void getUserID() throws IOException
 	{
-		System.out.println("");
 		while (true)
 		{
+			  System.out.println("");
         System.out.println("Note: UserID must be 8 Characters and" );
         System.out.println(" Include atleast one or more UpperCase,LowerCase,Numbers,SpecialCharacters");
 				System.out.println("Create User ID");

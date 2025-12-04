@@ -77,7 +77,7 @@ public class ProvideBankAccount
 
 	public static void ProvideSavingAccount() throws IOException
 	{
-		float UserBalance = 1000f;
+		float UserBalance = 1000:.2f;
 		userBalance = String.valueOf(UserBalance);
 		WriteUserDetailsToDatabase.writeUserBalance();
 	}

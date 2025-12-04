@@ -77,6 +77,5 @@ public class ProfileFile
 							System.out.println("Enter valid choice....");
 					}
 			}
-			scan.close();
 	}
 }
