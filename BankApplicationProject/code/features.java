@@ -33,7 +33,7 @@ public class features
 		if(ReadUserDetailsFromDatabase.UserSetMPINpin == null || ReadUserDetailsFromDatabase.UserSetMPINpin.isEmpty())
 		{
 		 System.out.println("");
- 		 System.out.println("Set MPIN Pin in Setting Through Select Option");
+ 		 System.out.println("firstly Set MPIN Pin to see balance ");
 		}
 		else
 		{
@@ -55,15 +55,22 @@ public class features
 	  }
 	}
 
+	public static void TransactionHistory() throws IOException
+	{
+		System.out.println("Here you can See Last Transaction only");
+		String Amount = ReadUserDetailsFromDatabase.readUserTransactionHistory();
+		System.out.println("Amount:- " + Amount);
+	}
+
 	public static void WaysToSendMoney() throws IOException
 	{
         System.out.println("");
         System.out.println("Please select the type of Ways you want to Send for:");
-        System.out.println("");
 
         running:
         while (true)
         {
+					  System.out.println("");
             System.out.println("1.SendMoneyTruoghPhoneNumber");
             System.out.println("2.SendMoneyTruoghAccountNumber");
             System.out.println("3.Back");
@@ -74,10 +81,12 @@ public class features
             switch (scanChoice)
             {
                 case "1":SendMoneyTruoghPhoneNumber();
-													ProvideBankAccount.userBalance = CheckingDetails.CheckSendMoney();
+													ProvideBankAccount.UserBalance -= CheckingDetails.CheckSendMoney();
+													ProvideBankAccount.ProvideSavingAccount();
                         	break;
                 case "2":SendMoneyTruoghAccountNumber();
-													ProvideBankAccount.userBalance = CheckingDetails.CheckSendMoney();
+													ProvideBankAccount.UserBalance -= CheckingDetails.CheckSendMoney();
+													ProvideBankAccount.ProvideSavingAccount();
                         	break;
                 case "3":System.out.println("you are going back.......");
 	                        System.out.println("");

@@ -11,6 +11,7 @@ public class CheckingDetails
   public static String sendPhoneNum;
   public static String sendAccNum;
   public static String sendIfscCode;
+  public static float TypeCastSendMoneyToFloat;
   static Scanner scan = new Scanner(System.in);
 
   public static void CheckSendPhoneNumber() throws IOException
@@ -89,7 +90,7 @@ public class CheckingDetails
     }
   }
 
-  public static String CheckSendMoney() throws IOException
+  public static float CheckSendMoney() throws IOException
   {
     ReadUserDetailsFromDatabase.readUserBalance();
     System.out.println("");
@@ -98,10 +99,12 @@ public class CheckingDetails
 			System.out.println("Enter Money to Send");
 			sendMoney = scan.nextLine();
       int TypeCastSendMoney = Integer.parseInt(sendMoney);
+      TypeCastSendMoneyToFloat = Float.parseFloat(sendMoney);
       float TypeCastUserBalance = Float.parseFloat(ReadUserDetailsFromDatabase.UserBalance);
 			if ((TypeCastSendMoney <= TypeCastUserBalance) && (TypeCastSendMoney >= 0))
 			{
         WriteUserDetailsToDatabase.writeUserSendMoney();
+        WriteUserDetailsToDatabase.writeUserTransactionHistory();
 				break;
 			}
 			else
@@ -109,7 +112,7 @@ public class CheckingDetails
 				System.out.println("Enter Less than Your Balance Amount");
 			}
 		}
-    return sendMoney;
+    return TypeCastSendMoneyToFloat;
   }
 
   public static void CheckMPINpin() throws IOException

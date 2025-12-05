@@ -26,7 +26,7 @@ public class HomeFile
 						System.out.println("");
 						System.out.println("Enter your choice(1,2,3,4,5,6,7,8,9) : ");
 						int choice = input.nextInt();
-						
+
 						switch (choice)
 						{
 								case 1:ProfileFile.ProfileFunction();
@@ -36,7 +36,8 @@ public class HomeFile
 								case 3:features.CheckBalance();
 												break;
 								case 4:System.out.println("Here you can See Last Transaction only");
-												System.out.println("Amount:- " + ReadUserDetailsFromDatabase.readUserTransactionHistory());
+												String Amount = ReadUserDetailsFromDatabase.readUserTransactionHistory();
+												System.out.println("Amount:- " + Amount);
 												break;
 								case 5:viewUsrBankReletedDetailes.viewPassBookInterFace();
 											  viewUsrBankReletedDetailes.viewLastTransactionInPassbook();

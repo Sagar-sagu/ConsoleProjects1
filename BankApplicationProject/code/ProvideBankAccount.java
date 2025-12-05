@@ -14,6 +14,8 @@ public class ProvideBankAccount
 	public static String generatedCustomerID;
 	public static String generatedUPIid;
 	public static String userBalance;
+	public static float UserBalance;
+
 
 	public static void ProvideAccountNumber() throws IOException
 	{
@@ -77,7 +79,7 @@ public class ProvideBankAccount
 
 	public static void ProvideSavingAccount() throws IOException
 	{
-		float UserBalance = 1000:.2f;
+		UserBalance = 1000.00f;
 		userBalance = String.valueOf(UserBalance);
 		WriteUserDetailsToDatabase.writeUserBalance();
 	}
