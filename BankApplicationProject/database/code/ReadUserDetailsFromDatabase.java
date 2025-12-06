@@ -192,12 +192,12 @@ public class ReadUserDetailsFromDatabase
 		 bufferedReader.close();
 	 }
 
-		 public static void readUserSendAccountNumber() throws IOException
+	 public static void readUserSendAccountNumber() throws IOException
 		{
-		 FileReader reader = new FileReader("database/databaseFolders/BankFeaturesDetailes/UserSendAccountNumber.txt");
-			BufferedReader bufferedReader = new BufferedReader(reader);
-			UserSendAccountNumber = bufferedReader.readLine();
-			bufferedReader.close();
+	 	FileReader reader = new FileReader("database/databaseFolders/BankFeaturesDetailes/UserSendAccountNumber.txt");
+		BufferedReader bufferedReader = new BufferedReader(reader);
+		UserSendAccountNumber = bufferedReader.readLine();
+		bufferedReader.close();
 		}
 
 		public static void readUserSendIFSCcode() throws IOException

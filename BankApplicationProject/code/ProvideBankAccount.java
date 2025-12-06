@@ -79,8 +79,16 @@ public class ProvideBankAccount
 
 	public static void ProvideSavingAccount() throws IOException
 	{
-		UserBalance = 1000.00f;
-		userBalance = String.valueOf(UserBalance);
-		WriteUserDetailsToDatabase.writeUserBalance();
+		if(ReadUserDetailsFromDatabase.UserSendMoney == null || ReadUserDetailsFromDatabase.UserSendMoney.isEmpty())
+		{
+			UserBalance = 1000.00f;
+			userBalance = String.valueOf(UserBalance);
+			WriteUserDetailsToDatabase.writeUserBalance();
+		}
+		else
+		{
+			userBalance = String.valueOf(UserBalance);
+			WriteUserDetailsToDatabase.writeUserBalance();
+		}
 	}
 }

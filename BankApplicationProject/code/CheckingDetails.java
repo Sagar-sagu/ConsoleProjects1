@@ -129,7 +129,6 @@ public class CheckingDetails
         SettingsFile.getCurrentTime();
         WriteUserDetailsToDatabase.writeUserTransactionDate();
         WriteUserDetailsToDatabase.writeUserTransactionTime();
-        viewUsrBankReletedDetailes.viewLastTransactionInPassbook();
         break;
       }
       else

@@ -55,13 +55,6 @@ public class features
 	  }
 	}
 
-	public static void TransactionHistory() throws IOException
-	{
-		System.out.println("Here you can See Last Transaction only");
-		String Amount = ReadUserDetailsFromDatabase.readUserTransactionHistory();
-		System.out.println("Amount:- " + Amount);
-	}
-
 	public static void WaysToSendMoney() throws IOException
 	{
         System.out.println("");
@@ -81,10 +74,14 @@ public class features
             switch (scanChoice)
             {
                 case "1":SendMoneyTruoghPhoneNumber();
+													System.out.println("");
+													viewUsrBankReletedDetailes.ViewLastTransaction();
 													ProvideBankAccount.UserBalance -= CheckingDetails.CheckSendMoney();
 													ProvideBankAccount.ProvideSavingAccount();
                         	break;
                 case "2":SendMoneyTruoghAccountNumber();
+													System.out.println("");
+													viewUsrBankReletedDetailes.viewLastTransactionInPassbook();
 													ProvideBankAccount.UserBalance -= CheckingDetails.CheckSendMoney();
 													ProvideBankAccount.ProvideSavingAccount();
                         	break;

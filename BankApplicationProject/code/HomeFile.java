@@ -1,5 +1,6 @@
 package code;
 
+//imported dependencies packages
 import java.io.IOException;
 import java.util.Scanner;
 import database.code.*;
@@ -35,12 +36,10 @@ public class HomeFile
 												break;
 								case 3:features.CheckBalance();
 												break;
-								case 4:System.out.println("Here you can See Last Transaction only");
-												String Amount = ReadUserDetailsFromDatabase.readUserTransactionHistory();
-												System.out.println("Amount:- " + Amount);
+								case 4:viewUsrBankReletedDetailes.ViewTransactionHistory();
 												break;
-								case 5:viewUsrBankReletedDetailes.viewPassBookInterFace();
-											  viewUsrBankReletedDetailes.viewLastTransactionInPassbook();
+								case 5:viewUsrBankReletedDetailes.ViewPassBookInterFace();
+											  viewUsrBankReletedDetailes.ViewLastTransactionInPassbook();
 												break;
 								case 6: SettingsFile.settings();
 												break;
