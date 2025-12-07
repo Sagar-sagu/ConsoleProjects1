@@ -167,13 +167,12 @@ public class ReadUserDetailsFromDatabase
  		 bufferedReader.close();
 		 }
 
-		 public static String readUserTransactionHistory() throws IOException
+		 public static void readUserTransactionHistory() throws IOException
 		{
 		   FileReader reader = new FileReader("database/databaseFolders/BankFeaturesDetailes/UserTransactionHistory.txt");
 	 		 BufferedReader bufferedReader = new BufferedReader(reader);
 	 		 UserTransactionHistory = bufferedReader.readLine();
 	 		 bufferedReader.close();
-			 return UserTransactionHistory;
 		 }
 
 		 public static void readUserSendPhoneNumber() throws IOException

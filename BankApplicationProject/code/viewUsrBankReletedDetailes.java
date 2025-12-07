@@ -31,7 +31,7 @@ public class viewUsrBankReletedDetailes
 		ReadUserDetailsFromDatabase.readUserSendIFSCcode();
 		if(ReadUserDetailsFromDatabase.UserSendIFSCcode == null || ReadUserDetailsFromDatabase.UserSendIFSCcode.isEmpty())
 		{
-			System.out.println("Your not Sending any Money Through AccountNumber")
+			System.out.println("Your not Sending any Money Through AccountNumber");
 		}
 		else
 		{
@@ -84,8 +84,8 @@ public class viewUsrBankReletedDetailes
 		else
 		{
 			System.out.println("Here you can See Last Transaction only");
-			String Amount = ReadUserDetailsFromDatabase.readUserTransactionHistory();
-			System.out.println("Amount:- " + Amount);
+			ReadUserDetailsFromDatabase.readUserTransactionHistory();
+			System.out.println("Amount:- " + ReadUserDetailsFromDatabase.UserTransactionHistory);
 		}
 	}
 }

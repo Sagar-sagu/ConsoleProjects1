@@ -76,13 +76,15 @@ public class features
                 case "1":SendMoneyTruoghPhoneNumber();
 													System.out.println("");
 													viewUsrBankReletedDetailes.ViewLastTransaction();
-													ProvideBankAccount.UserBalance -= CheckingDetails.CheckSendMoney();
+													System.out.println(ProvideBankAccount.UserBalance);
+													ProvideBankAccount.UserBalance -= CheckingDetails.TypeCastSendMoney;
 													ProvideBankAccount.ProvideSavingAccount();
                         	break;
                 case "2":SendMoneyTruoghAccountNumber();
 													System.out.println("");
-													viewUsrBankReletedDetailes.viewLastTransactionInPassbook();
-													ProvideBankAccount.UserBalance -= CheckingDetails.CheckSendMoney();
+													viewUsrBankReletedDetailes.ViewLastTransactionInPassbook();
+													System.out.println(ProvideBankAccount.UserBalance);
+													ProvideBankAccount.UserBalance -= CheckingDetails.TypeCastSendMoney;
 													ProvideBankAccount.ProvideSavingAccount();
                         	break;
                 case "3":System.out.println("you are going back.......");

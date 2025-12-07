@@ -9,7 +9,7 @@ public class Main
 {
 	public static void main(String[] args) throws IOException
 	{
-		//global variabl
+		//global variable
 		Scanner scan=new Scanner(System.in);
 		//Entry point of This Project
 		System.out.println("WELCOME TO BANK APPLICATION");
@@ -42,7 +42,7 @@ public class Main
 		}
 		catch(InputMismatchException e)
 		{
-			System.out.println("Invalid choice, please try again.");
+			System.out.println("Input MissMatch, please try again.");
 		}
 	}
 }

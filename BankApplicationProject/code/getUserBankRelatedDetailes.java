@@ -7,7 +7,7 @@ import database.code.WriteUserDetailsToDatabase;
 
 public class getUserBankRelatedDetailes
 {
-	//globle level varaibles
+	//global level variable
 	static Scanner scan = new Scanner(System.in);
 	public static String phoneNum;
 	public static String usrName;

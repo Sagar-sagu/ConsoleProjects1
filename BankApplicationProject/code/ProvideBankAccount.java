@@ -1,10 +1,9 @@
 package code;
 
 //import dependencies packages
-import java.util.Scanner;
 import java.util.Random;
 import java.io.IOException;
-import database.code.WriteUserDetailsToDatabase;
+import database.code.*;
 
 public class ProvideBankAccount
 {
@@ -14,7 +13,7 @@ public class ProvideBankAccount
 	public static String generatedCustomerID;
 	public static String generatedUPIid;
 	public static String userBalance;
-	public static float UserBalance;
+	public static int UserBalance;
 
 
 	public static void ProvideAccountNumber() throws IOException
@@ -79,9 +78,10 @@ public class ProvideBankAccount
 
 	public static void ProvideSavingAccount() throws IOException
 	{
+		ReadUserDetailsFromDatabase.readUserSendMoney();
 		if(ReadUserDetailsFromDatabase.UserSendMoney == null || ReadUserDetailsFromDatabase.UserSendMoney.isEmpty())
 		{
-			UserBalance = 1000.00f;
+			UserBalance = 1000;
 			userBalance = String.valueOf(UserBalance);
 			WriteUserDetailsToDatabase.writeUserBalance();
 		}
