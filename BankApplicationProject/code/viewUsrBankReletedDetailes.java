@@ -5,7 +5,7 @@ import database.code.ReadUserDetailsFromDatabase;
 
 public class viewUsrBankReletedDetailes
 {
-	public static void viewPassBookInterFace() throws IOException
+	public static void ViewPassBookInterFace() throws IOException
 	{
 		ReadUserDetailsFromDatabase.readUserName();
 		ReadUserDetailsFromDatabase.readUserFatherName();
@@ -26,7 +26,35 @@ public class viewUsrBankReletedDetailes
 		System.out.println("Address :- " + ReadUserDetailsFromDatabase.UserAddress);
 	}
 
-	public static void viewLastTransactionInPassbook() throws IOException
+	public static void ViewLastTransactionInPassbook() throws IOException
+	{
+		ReadUserDetailsFromDatabase.readUserSendIFSCcode();
+		if(ReadUserDetailsFromDatabase.UserSendIFSCcode == null || ReadUserDetailsFromDatabase.UserSendIFSCcode.isEmpty())
+		{
+			System.out.println("Your not Sending any Money Through AccountNumber");
+		}
+		else
+		{
+			ReadUserDetailsFromDatabase.readUserName();
+			ReadUserDetailsFromDatabase.readUserSendMoney();
+			ReadUserDetailsFromDatabase.readUserSendAccountNumber();
+			ReadUserDetailsFromDatabase.readUserSendIFSCcode();
+			ReadUserDetailsFromDatabase.readUserTransactionDate();
+			ReadUserDetailsFromDatabase.readUserTransactionTime();
+		  System.out.println("");
+			System.out.println("Debited From ");
+			System.out.println(" Name:- " + ReadUserDetailsFromDatabase.UserName);
+			System.out.println("Amount:- " + ReadUserDetailsFromDatabase.UserSendMoney);
+			System.out.println("");
+			System.out.println("Credited To ");
+			System.out.println("AccountNumber:- " + ReadUserDetailsFromDatabase.UserSendAccountNumber);
+			System.out.println("IFSCcode:- " + ReadUserDetailsFromDatabase.UserSendIFSCcode);
+			System.out.println("TransactionTime:- " + ReadUserDetailsFromDatabase.UserTransactionTime );
+			System.out.println("TransactionDate:- " + ReadUserDetailsFromDatabase.UserTransactionDate);
+		}
+	}
+
+	public static void ViewLastTransaction() throws IOException
 	{
 		ReadUserDetailsFromDatabase.readUserName();
 		ReadUserDetailsFromDatabase.readUserPhoneNumber();
@@ -34,16 +62,30 @@ public class viewUsrBankReletedDetailes
 		ReadUserDetailsFromDatabase.readUserTransactionDate();
 		ReadUserDetailsFromDatabase.readUserTransactionTime();
 		ReadUserDetailsFromDatabase.readUserSendPhoneNumber();
-		  System.out.println("");
-		//	System.out.println("Here you can See Last Transaction only");
-			System.out.println("Debited From ");
-			System.out.println(" Name :- " + ReadUserDetailsFromDatabase.UserName);
-			System.out.println("PhoneNumber :- " + ReadUserDetailsFromDatabase.UserPhoneNumber);
-			System.out.println("Amount :- " + ReadUserDetailsFromDatabase.UserSendMoney);
-			System.out.println("TransactionTime :- " + ReadUserDetailsFromDatabase.UserTransactionTime );
-			System.out.println("TransactionDate :- " + ReadUserDetailsFromDatabase.UserTransactionDate);
-			System.out.println("");
-			System.out.println("Credited To ");
-			System.out.println("PhoneNumber :- " + ReadUserDetailsFromDatabase.UserSendPhoneNumber);
+		System.out.println("");
+		System.out.println("Debited From ");
+		System.out.println(" Name :- " + ReadUserDetailsFromDatabase.UserName);
+		System.out.println("PhoneNumber :- " + ReadUserDetailsFromDatabase.UserPhoneNumber);
+		System.out.println("Amount :- " + ReadUserDetailsFromDatabase.UserSendMoney);
+		System.out.println("");
+		System.out.println("Credited To ");
+		System.out.println("PhoneNumber :- " + ReadUserDetailsFromDatabase.UserSendPhoneNumber);
+		System.out.println("TransactionTime :- " + ReadUserDetailsFromDatabase.UserTransactionTime );
+		System.out.println("TransactionDate :- " + ReadUserDetailsFromDatabase.UserTransactionDate);
+	}
+
+	public static void ViewTransactionHistory() throws IOException
+	{
+		ReadUserDetailsFromDatabase.readUserSendMoney();
+		if(ReadUserDetailsFromDatabase.UserSendMoney == null || ReadUserDetailsFromDatabase.UserSendMoney.isEmpty())
+		{
+			System.out.println("Your not Sending any Money Yet");
+		}
+		else
+		{
+			System.out.println("Here you can See Last Transaction only");
+			ReadUserDetailsFromDatabase.readUserTransactionHistory();
+			System.out.println("Amount:- " + ReadUserDetailsFromDatabase.UserTransactionHistory);
+		}
 	}
 }

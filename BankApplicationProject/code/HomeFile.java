@@ -1,5 +1,6 @@
 package code;
 
+//imported dependencies packages
 import java.io.IOException;
 import java.util.Scanner;
 import database.code.*;
@@ -25,30 +26,29 @@ public class HomeFile
 						System.out.println("9.Back");
 						System.out.println("");
 						System.out.println("Enter your choice(1,2,3,4,5,6,7,8,9) : ");
-						int choice = input.nextInt();
-						
+						String choice = input.nextLine();
+
 						switch (choice)
 						{
-								case 1:ProfileFile.ProfileFunction();
+								case "1":ProfileFile.ProfileFunction();
 												break;
-								case 2:features.WaysToSendMoney();
+								case "2":features.WaysToSendMoney();
 												break;
-								case 3:features.CheckBalance();
+								case "3":features.CheckBalance();
 												break;
-								case 4:System.out.println("Here you can See Last Transaction only");
-												System.out.println("Amount:- " + ReadUserDetailsFromDatabase.readUserTransactionHistory());
+								case "4":viewUsrBankReletedDetailes.ViewTransactionHistory();
 												break;
-								case 5:viewUsrBankReletedDetailes.viewPassBookInterFace();
-											  viewUsrBankReletedDetailes.viewLastTransactionInPassbook();
+								case "5":viewUsrBankReletedDetailes.ViewPassBookInterFace();
+											  viewUsrBankReletedDetailes.ViewLastTransactionInPassbook();
 												break;
-								case 6: SettingsFile.settings();
+								case "6": SettingsFile.settings();
 												break;
-								case 7:DeleteUserDetailsFromDatabase.ClearUserDetails();
+								case "7":DeleteUserDetailsFromDatabase.ClearUserDetails();
                         System.out.println("Delete all Details Successfully...");
 												System.exit(0);
-								case 8:System.out.println("Exiting the Application...");
+								case "8":System.out.println("Exiting the Application...");
 												System.exit(0);
-								case 9:System.out.println("you are going back.....");
+								case "9":System.out.println("you are going back.....");
 												System.out.println("");
 											 	break running;
 								default:System.out.println("Invalid choice. Please try again.");

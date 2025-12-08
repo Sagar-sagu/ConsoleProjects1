@@ -132,7 +132,7 @@ public class WriteUserDetailsToDatabase
 	public static void writeUserTransactionHistory() throws IOException
 	{
 		FileWriter WriteDetailes = new FileWriter("database/databaseFolders/BankFeaturesDetailes/UserTransactionHistory.txt");
-		WriteDetailes.write(SettingsFile.sendMoney);
+		WriteDetailes.write(CheckingDetails.sendMoney);
 		WriteDetailes.close();
 	}
 

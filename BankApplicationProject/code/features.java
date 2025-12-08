@@ -33,58 +33,68 @@ public class features
 		if(ReadUserDetailsFromDatabase.UserSetMPINpin == null || ReadUserDetailsFromDatabase.UserSetMPINpin.isEmpty())
 		{
 		 System.out.println("");
- 		 System.out.println("Set MPIN Pin in Setting Through Select Option");
+ 		 System.out.println("firstly Set MPIN Pin to see balance ");
 		}
 		else
 		{
 			while (true)
 			{
-					System.out.println("Enter your MPIN pin ");
-					String userMpinPin = scan.nextLine();
-					if (userMpinPin.equals(ReadUserDetailsFromDatabase.UserSetMPINpin))
-					{
-						System.out.println("");
-						System.out.println("Balance :- " + ReadUserDetailsFromDatabase.UserBalance);
-						break;
-					}
-					else
-					{
-						System.out.println("Invalid MPIN PIN");
-					}
-			 }
+				System.out.println("Enter your MPIN pin ");
+				String userMpinPin = scan.nextLine();
+				if (userMpinPin.equals(ReadUserDetailsFromDatabase.UserSetMPINpin))
+				{
+					System.out.println("");
+					System.out.println("Balance :- " + ReadUserDetailsFromDatabase.UserBalance);
+					break;
+				}
+				else
+				{
+					System.out.println("Invalid MPIN PIN");
+				}
+			}
 	  }
 	}
 
 	public static void WaysToSendMoney() throws IOException
 	{
-        System.out.println("");
-        System.out.println("Please select the type of Ways you want to Send for:");
-        System.out.println("");
+    System.out.println("");
+    System.out.println("Please select the type of Ways you want to Send for:");
 
-        running:
-        while (true)
-        {
-            System.out.println("1.SendMoneyTruoghPhoneNumber");
-            System.out.println("2.SendMoneyTruoghAccountNumber");
-            System.out.println("3.Back");
-            System.out.println("");
-            System.out.println("Enter your choice (1,2,3) ");
-            String scanChoice = scan.nextLine();
+    running:
+    while (true)
+    {
+		  System.out.println("");
+      System.out.println("1.SendMoneyTruoghPhoneNumber");
+      System.out.println("2.SendMoneyTruoghAccountNumber");
+      System.out.println("3.Back");
+      System.out.println("");
+      System.out.println("Enter your choice (1,2,3) ");
+      String scanChoice = scan.nextLine();
 
-            switch (scanChoice)
-            {
-                case "1":SendMoneyTruoghPhoneNumber();
-													ProvideBankAccount.userBalance = CheckingDetails.CheckSendMoney();
-                        	break;
-                case "2":SendMoneyTruoghAccountNumber();
-													ProvideBankAccount.userBalance = CheckingDetails.CheckSendMoney();
-                        	break;
-                case "3":System.out.println("you are going back.......");
-	                        System.out.println("");
-	                        break running;
-                default:System.out.println("Invalid choice, please try again.");
-                        	break;
-            }
-        }
+      switch (scanChoice)
+      {
+        case "1":	ProvideBankAccount.ProvideSavingAccount();
+									SendMoneyTruoghPhoneNumber();
+									System.out.println("");
+									viewUsrBankReletedDetailes.ViewLastTransaction();
+									System.out.println(ProvideBankAccount.UserBalance);
+									ProvideBankAccount.UserBalance -= CheckingDetails.TypeCastSendMoney;
+									ProvideBankAccount.ProvideSavingAccount();
+                	break;
+        case "2":	ProvideBankAccount.ProvideSavingAccount();
+									SendMoneyTruoghAccountNumber();
+									System.out.println("");
+									viewUsrBankReletedDetailes.ViewLastTransactionInPassbook();
+									System.out.println(ProvideBankAccount.UserBalance);
+									ProvideBankAccount.UserBalance -= CheckingDetails.TypeCastSendMoney;
+									ProvideBankAccount.ProvideSavingAccount();
+                	break;
+        case "3":System.out.println("you are going back.......");
+                  System.out.println("");
+                  break running;
+        default:System.out.println("Invalid choice, please try again.");
+                	break;
+      }
+    }
 	}
 }

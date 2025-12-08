@@ -94,17 +94,17 @@ public class LogInFile
                 System.out.println("2.SecurityPIN");
                 System.out.println("3.Both");
                 System.out.println("Choose (1/2/3)");
-                int choose = scan.nextInt();
+                String choose = scan.nextLine();
 
                 switch(choose)
                 {
-                    case 1:System.out.println("UserID: "+ showUserID);
+                    case "1":System.out.println("UserID: "+ showUserID);
                     		System.out.println("");
                             break running;
-                    case 2:System.out.println("SecurityPIN: "+ showSecurityPIN);
+                    case "2":System.out.println("SecurityPIN: "+ showSecurityPIN);
 	                    		System.out.println("");
 	                    		 break running;
-                    case 3:System.out.println("UserID: " + showUserID);
+                    case "3":System.out.println("UserID: " + showUserID);
                            System.out.println("SecurityPIN: " + showSecurityPIN);
                            System.out.println("");
                            break running;

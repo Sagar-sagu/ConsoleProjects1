@@ -5,6 +5,7 @@ import java.util.Scanner;
 import java.io.IOException;
 import java.time.LocalTime;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import database.code.WriteUserDetailsToDatabase;
 
 public class SettingsFile
@@ -44,6 +45,7 @@ public class SettingsFile
     public static void getCurrentTime() throws IOException
 		 {
          LocalTime Time = LocalTime.now();
-				 time = Time + "";
+				 DateTimeFormatter formatterTime = DateTimeFormatter.ofPattern("HH:mm:ss a");
+				 time = Time.format(formatterTime) + "";
     }
 }
