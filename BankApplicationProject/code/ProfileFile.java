@@ -44,23 +44,23 @@ public class ProfileFile
 									System.out.println("3.SecurityPIN");
 									System.out.println("4.Back");
 									System.out.println("Enter your choice (1/2/3/4)");
-									int choose=scan.nextInt();
+									String choose=scan.nextLine();
 
 									switch(choose)
 									{
-											case 1:SignInFile.getUserName();
+											case "1":SignInFile.getUserName();
 															System.out.println(" Updated Name Successfully!");
 															System.out.println("");
 															break running;
-											case 2:SignInFile.getUserID();
+											case "2":SignInFile.getUserID();
 															System.out.println(" Updated UserID Successfully!");
 															System.out.println("");
 															break running;
-											case 3:SignInFile.getSecurityPIN();
+											case "3":SignInFile.getSecurityPIN();
 															System.out.println(" Updated SecurityPIN Successfully!");
 															System.out.println("");
 															break running;
-											case 4:System.out.println("your are going back.......");
+											case "4":System.out.println("your are going back.......");
 															break running;
 											default:System.out.println("invalid choice.....");
 															break;

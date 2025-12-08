@@ -15,8 +15,7 @@ public class Main
 		System.out.println("WELCOME TO BANK APPLICATION");
 		System.out.println("");
 		System.out.println("Get started......");
-		try
-		{
+
 			while (true) // Assuming you have a condition to keep the loop running
 			{
 				System.out.println("");
@@ -26,23 +25,18 @@ public class Main
 				System.out.println("");
 
 				System.out.println("Enter your choice (1/2/3):");
-				int choice=scan.nextInt();
+				String choice=scan.nextLine();
 				switch (choice)
 				{
-				case 1:LogInFile.LogInFunction();
-								break;
-				case 2:SignInFile.SigInFunction();
-								break;
-				case 3:System.out.println("Exiting the Application...");
-								System.exit(0);
-				default:System.out.println("Invalid choice, please try again.");
+					case "1":LogInFile.LogInFunction();
+									break;
+					case "2":SignInFile.SigInFunction();
+									break;
+					case "3":System.out.println("Exiting the Application...");
+									System.exit(0);
+					default:System.out.println("Invalid choice, please try again.");
 							break;
-			  }
-	    }
-		}
-		catch(InputMismatchException e)
-		{
-			System.out.println("Input MissMatch, please try again.");
-		}
+				}
+			}
 	}
 }
