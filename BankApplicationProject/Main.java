@@ -1,6 +1,5 @@
 //imported dependencies packages
 import java.util.Scanner;
-import java.util.InputMismatchException;
 import code.LogInFile;
 import code.SignInFile;
 import java.io.IOException;
