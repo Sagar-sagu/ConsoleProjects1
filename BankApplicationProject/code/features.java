@@ -77,7 +77,7 @@ public class features
 									SendMoneyTruoghPhoneNumber();
 									System.out.println("");
 									viewUsrBankReletedDetailes.ViewLastTransaction();
-									System.out.println(ProvideBankAccount.UserBalance);
+									//System.out.println(ProvideBankAccount.UserBalance);
 									ProvideBankAccount.UserBalance -= CheckingDetails.TypeCastSendMoney;
 									ProvideBankAccount.ProvideSavingAccount();
                 	break;
@@ -85,7 +85,7 @@ public class features
 									SendMoneyTruoghAccountNumber();
 									System.out.println("");
 									viewUsrBankReletedDetailes.ViewLastTransactionInPassbook();
-									System.out.println(ProvideBankAccount.UserBalance);
+									//System.out.println(ProvideBankAccount.UserBalance);
 									ProvideBankAccount.UserBalance -= CheckingDetails.TypeCastSendMoney;
 									ProvideBankAccount.ProvideSavingAccount();
                 	break;
